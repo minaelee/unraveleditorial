@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta info -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resources for API documentation presentation by Minae Lee" />
+  <title>Web API Documentation & OpenAPI</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- FontAwesome  -->
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+
+  <!-- Local assets -->
+  <link rel="stylesheet" href="/apidocs/apidocs.css" />
+  <link rel="icon" href="/images/cactus.svg">
+
+</head>
+
+<body>
+  <header>
+    <h1>Web API Documentation & OpenAPI</h1>
+    <p>A companion page of resources for a presentation on documenting APIs</p>
+    <p>Questions? Feel free to <a href="mailto:minae.lee@gmail.com">email the author</a> of this presentation & resources list.</p>
+  </header>
+
+  <main>
+
+    <div id="slides-btn-container">
+      <a id="slides-btn" href="https://docs.google.com/presentation/d/1LBjSpWeI9oNjTE1PG67E0zKWzRXRtivi1o-LKo9gSbI/edit?usp=sharing">View the presentation slides</a>
+    </div>
+
+    <div id="demo-btn-container">
+      <a id="demo-btn" href="/apidocs/highscores">View information on the High Scores Demo API</a>
+    </div>
+
+    <!-- Resources -->
+
+    <h2>Links to further resources</h2>
+    <a id="expand-toggle">Expand all</a>
+
+    <details class="flex-col">
+      <summary>Some real-world API documentation sites</summary>
+      <a href="https://developer.spotify.com/documentation/web-api">Spotify</a>
+      <a href="https://developers.skyscanner.net/docs/intro">SkyScanner</a>
+      <a href="https://docs.github.com/en/rest">GitHub</a>
+      <a href="https://developers.amadeus.com/self-service/category/flights/api-doc/on-demand-flight-status/api-reference">Amadeus (GDS)</a>
+      <a href="https://docs.stripe.com/api">Stripe</a>
+      <a href="https://shopify.dev/docs/api">Shopify</a>
+      <a href="https://docs.sendgrid.com/api-reference">SendGrid</a>
+      <a href="https://cloud.google.com/storage/docs/json_api">Google Cloud Storage</a>
+    </details>
+
+    <details class="flex-col">
+      <summary>Learn API & developer documentation</summary>
+      <!-- Online -->
+      <h3>Online resources</h3>
+      <a href="https://idratherbewriting.com/learnapidoc/">I'd Rather Be Writing Documenting APIs course</a>
+      <a href="https://www.youtube.com/watch?v=0CSyIBHQy9g">FreeCodeCamp API Documentation Best Practices video course</a>
+      <!-- Books -->
+      <h3>Books</h3>
+      <a href="https://docsfordevelopers.com/">Docs For Developers</a>
+      <a href="https://www.docslikecode.com/">Docs Like Code</a>
+      <a href="https://www.docsasecosystem.com/">Docs As Ecosystem</a>
+    </details>
+
+    <details>
+      <summary>OpenAPI</summary>
+      <div class="flex-col">
+      <a href="https://www.openapis.org/">The OpenAPI Initiative</a>
+      <a href="https://editor-next.swagger.io/">Swagger OpenAPI 3.1 Editor</a>
+      <a href="https://petstore31.swagger.io/">Swagger Petstore OpenAPI Demo</a>
+      <a href="https://redocly.github.io/redoc/">Redocly Musem OpenAPI Demo</a>
+      <a href="https://github.com/sonallux/spotify-web-api/blob/main/official-spotify-open-api.yml">Spotify OpenAPI Description</a>
+      <a href="https://dev.to/dreamlogic/test-driving-openapi-documentation-generators-2024-part-1-of-3-9a7">Test Driving OpenAPI Documentation Generators</a>
+      </div>
+      * Also see the <a href="#publish">Publishing developer documentation</a> resources list for publishing & webpage generation tools that support OpenAPI.
+    </details>
+
+    <details class="flex-col">
+      <summary>Publishing developer documentation</summary>
+
+      <h3 id="publish">Documentation hub/portal platforms with hosting and support for API reference generation</h3>
+      <a href="https://mintlify.com/">Mintlify</a>
+      <a href="https://stoplight.io/">Stoplight</a>
+      <a href="https://redocly.com/">Redocly</a>
+      <a href="https://docusaurus.io/">Docusaurus</a>
+      <a href="https://readme.com/">ReadMe</a>
+      <a href="https://www.gitbook.com/">GitBook</a>
+      <a href="https://www.jetbrains.com/writerside/">Writerside</a>
+      <a href="https://antora.org/">Antora</a>
+      <a href="https://buildwithfern.com">Fern</a>
+      <a href="https://swagger.io/tools/swaggerhub/features/swaggerhub-portal/">SwaggerHub Portal</a>
+
+      <h3>Documentation generation, hosting not included</h3>
+      <a href="https://sphinx-doc.org/">Sphinx</a>
+      <a href="https://about.readthedocs.com/tools/mkdocs/">MkDocs</a>
+
+      <h3>Hosting for Sphinx and MkDocs</h3>
+      <a href="https://readthedocs.io">Read The Docs</a>
+
+      <h3>API reference generation from OpenAPI, hosting not included</h3>
+      <a href="https://swagger.io/tools/swagger-ui/">SwaggerUI</a>
+      <a href="https://redocly.github.io/redoc/"></a>Redoc</span>
+      <a href="https://stoplight.io/open-source/elements">Stoplight Elements</a>
+      <a href="https://rapidocweb.com/">Rapidoc</a>
+    </details>
+
+    <details class="flex-col">
+      <summary>API testing tools</summary>
+      <a href="https://curl.se/docs/tutorial.html">cURL tutorial (GUI tool)</a>
+      <a href="https://www.postman.com/">Postman (CLI tool)</a>
+    </details>
+
+    <details class="flex-col">
+      <summary>Markup languages</summary>
+      <a href="https://www.markdownguide.org/getting-started/">Markdown Guide</a>
+      <a href="https://docutils.sourceforge.io/rst.html">ReStructuredText</a>
+      <a href="https://asciidoc.org/">AsciiDoc</a>
+    </details>
+
+    <details class="flex-col">
+      <summary>Data serialization languages</summary>
+      <a href="https://yaml.org">YAML</a>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a>
+    </details>
+
+    <details class="flex-col">
+      <summary>Miscellaneous</summary>
+      <a href="https://www.postman.com/state-of-api/">Postman State of the API Report 2023</a>
+      <a href="https://publicapis.dev/">PublicAPIs.dev - a collection of public APIs</a>
+      <a href="https://rapidapi.com/hub">RapidAPI Hub - private and public APIs</a>
+      <a href="https://www.w3schools.com/git/git_intro.asp?remote=github">Introduction to git and GitHub (W3Schools)</a>
+      <a href="https://learngitbranching.js.org/">Learn Git Branching</a>
+    </details>
+
+  </main>
+
+  <footer>
+    &copy; Minae Lee 2024
+  </footer>
+
+  <script>
+    // Expand or collapse all detail elements
+    const expandToggle = document.querySelector("#expand-toggle");
+    expandToggle.addEventListener("click", () => {
+      const detailsElements = document.querySelectorAll('details');
+      const shouldExpand = expandToggle.innerText === "Expand all";
+      detailsElements.forEach(details => details.open = shouldExpand);
+      expandToggle.innerText = shouldExpand ? "Collapse all" : "Expand all";
+    });
+  </script>
+</body>
+</html>

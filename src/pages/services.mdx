@@ -1,0 +1,62 @@
+---
+title: "Services | Unravel Editorial"
+---
+
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import PageHeader from '@components/PageHeader.astro'
+import { Heading, Link } from 'accessible-astro-components'
+
+<DefaultLayout title="Services | Unravel Editorial">
+  <PageHeader title="services" />
+
+  <section class="mt-0 mb-12">
+    <div class="container">
+        <ul class="list-disc pl-6 space-y-0">
+          <li>Manuscript assessment</li>
+          <li>Developmental editing</li>
+          <li>Line editing</li>
+          <li>Copyediting</li>
+          <li>Proofreading</li>
+        </ul>
+        <p>
+        <span aria-hidden="true">&nbsp;</span>
+
+        I do not edit manuscripts produced using generative AI, and you can trust that I will not edit _your_ work using generative AI.<br />
+        <span aria-hidden="true">&nbsp;</span>
+        
+        For an initial consultation to discuss your project and determine if we're a good fit, please <Link href="mailto:unraveleditorial@gmail.com">email me</Link>.
+      </p>
+    </div>
+  </section>
+  <section class="my-12">
+    <div class="container">
+      <Heading level="h2">preferred genres</Heading>
+        I prefer to work with the following fiction genres:
+      <ul class="list-disc pl-6 space-y-0">
+        <li>Literary and upmarket fiction</li>
+        <li>Speculative fiction, including science fiction, fantasy, and magical realism</li>
+        <li>Horror</li>
+        <li>Suspense</li>
+        <li>Thriller</li>
+      </ul>
+      <br />
+
+      For nonfiction, my background in software engineering makes me especially qualified to edit developer-focused manuscripts.<br />
+      <span aria-hidden="true">&nbsp;</span>    
+
+      I also work with other types of nonfiction, such as memoirs.
+    </div>
+  </section>
+
+  <section class="my-12">
+    <div class="container">
+      <Heading level="h2">qualifications</Heading>
+      <ul class="list-disc pl-6 space-y-0">
+        <li>Bachelor of Arts in Applied Linguistics, Portland State University</li>
+        <li><Link href="/images/aces-certificate.pdf" target="_blank">Poynter-ACES certification in copyediting</Link></li>
+        <li>Currently pursuing the <Link href="https://www.clubedfreelancers.com/">Club Ed</Link> certification in Developmental Editing</li>
+      </ul>
+    </div>
+  </section>
+
+</DefaultLayout>

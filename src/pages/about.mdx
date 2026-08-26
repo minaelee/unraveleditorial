@@ -1,0 +1,41 @@
+---
+title: "About | Unravel Editorial"
+---
+
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import PageHeader from '@components/PageHeader.astro'
+import { Link } from 'accessible-astro-components'
+import { Icon } from 'astro-icon/components'
+
+<DefaultLayout title="About | Unravel Editorial">
+  <PageHeader title="about" />
+  <section>
+    <div class="container">
+      <div class="space-content">
+        <div class="gap-2xs flex items-center">
+          <Icon aria-hidden="true" name="lucide:mail" size={20} class="flex-shrink-0" />
+          <p>
+            <span class="font-bold">Email: </span>
+            <Link href="mailto:unraveleditorial@gmail.com">unraveleditorial@gmail.com</Link><br />
+          </p>
+        </div>
+      </div>
+      <p>
+        <span aria-hidden="true">&nbsp;</span>
+
+        I am a freelance editor based out of Phoenix, Arizona.<br />
+        <span aria-hidden="true">&nbsp;</span>
+
+        My writing and editing background is mainly in coding and software technology. More recently, I have trained and worked in <Link href="/services">fiction editing</Link>.<br />
+        <span aria-hidden="true">&nbsp;</span>
+
+        I bring an impeccable eye for detail, a love of language, and a passion for the craft of storytelling to my work.<br />
+        <span aria-hidden="true">&nbsp;</span>
+
+        For more about me personally, find me at <Link href="https://minaelee.com">minaelee.com</Link>.<br />
+      </p>
+
+
+    </div>
+  </section>
+</DefaultLayout>

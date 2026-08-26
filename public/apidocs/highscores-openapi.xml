@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <openapi>3.1.0</openapi>
+  <info>
+    <title>High Scores API</title>
+    <version>1.0.0</version>
+    <description>API for managing high scores</description>
+    <contact>
+      <name>Minae Lee</name>
+      <email>minae.lee@gmail.com</email>
+    </contact>
+    <license>
+      <name>MIT</name>
+      <url>https://opensource.org/licenses/MIT</url>
+    </license>
+  </info>
+  <tags>
+    <name>HighScores</name>
+      <description>Endpoints for managing high scores</description>
+  </tags>
+  <servers>
+    <url>https://highscores-api.glitch.me</url>
+    <description>Production server</description>
+  </servers>
+  <paths>
+    <path>
+      <pathname>"/highscores"</pathname>
+      <get>
+        <summary>Get all high scores</summary>
+        <tags>HighScores</tags>
+        <responses>
+          <200>
+            <description>Successful response</description>
+            <content>
+              <application/json>
+                  <schema>
+                      <type>array</type>
+                      <items><$ref>#/components/schemas/HighScore
+                      </$ref>
+                  </items>
+              </schema>
+              </application/json>
+            </content>
+          </200>
+          <500>
+            <$ref>#/components/responses/InternalServerError
+            </$ref>
+          </500>
+        </responses>
+      </get>
+      <delete>
+        <summary>Delete all high scores</summary>
+        <tags>HighScores</tags>
+        <responses>
+          <204>
+      <description>High scores deleted successfully</description>
+    </204>
+    <500>
+      <$ref>#/components/responses/InternalServerError</$ref>
+    </500>undefined</responses>undefined</delete>undefined<//highscores>undefined</highscore>undefined<post>undefined<summary>Add a new high score record</summary>undefined<tags>HighScores</tags>undefined<requestBody>undefined<required>true</required>undefined<content>undefined<application/json>
+<schema><$ref>#/components/schemas/HighScore
+</$ref>undefined</schema>undefined</application/json>undefined</content>undefined</requestBody>undefined<responses>undefined<201>undefined<description>High score added successfully</description>undefined<content>undefined<application/json>
+<schema><$ref>#/components/schemas/HighScore
+</$ref>undefined</schema>undefined</application/json>undefined</content>undefined</201>undefined<500><$ref>#/components/responses/InternalServerErrorundefined</$ref>undefined</500>undefined</responses>undefined</post>undefined<//highscore>undefined</highscore/{id}>undefined<parameters><$ref>#/components/parameters/HighScoreIdundefined</$ref>undefined</parameters>undefined<get>undefined<summary>Get one high score</summary>undefined<tags>HighScores</tags>undefined<responses>undefined<200>undefined<description>Successful response</description>undefined<content>undefined<application/json>undefined<schema><$ref>#/components/schemas/HighScoreundefined</$ref>undefined</schema>undefined</application/json>undefined</content>undefined</200>undefined<404><$ref>#/components/responses/HighScoreNotFoundundefined</$ref>undefined</404>undefined<500><$ref>#/components/responses/InternalServerErrorundefined</$ref>undefined</500>undefined</responses>undefined</get>undefined<put>undefined<summary>Replace a high score record by ID</summary>undefined<tags>HighScores</tags>undefined<requestBody>undefined<required>true</required>undefined<content>undefined<application/json>undefined<schema><$ref>#/components/schemas/HighScoreRequestundefined</$ref>undefined</schema>undefined</application/json>undefined</content>undefined</requestBody>undefined<responses>undefined<200>undefined<description>High score replaced successfully</description>undefined<content>undefined<application/json>undefined<schema><$ref>#/components/schemas/HighScoreundefined</$ref>undefined</schema>undefined</application/json>undefined</content>undefined</200>undefined<404><$ref>#/components/responses/HighScoreNotFoundundefined</$ref>undefined</404>undefined<500><$ref>#/components/responses/InternalServerErrorundefined</$ref>undefined</500>undefined</responses>undefined</put>undefined<patch>undefined<summary>Update a high score by ID</summary>undefined<tags>HighScores</tags>undefined<requestBody>undefined<required>true</required>undefined<content>undefined<application/json>undefined<schema>undefined<type>object</type>undefined<properties>undefined<score>undefined<type>integer</type>undefined</score>undefined</properties>undefined<examples>undefined<score>9999</score>undefined</examples>undefined</schema>undefined</application/json>undefined</content>undefined</requestBody>undefined<responses>undefined<200>undefined<description>High score updated successfully</description>undefined<content>undefined<application/json>undefined<schema><$ref>#/components/schemas/HighScoreundefined</$ref>undefined</schema>undefined</application/json>undefined</content>undefined</200>undefined<404><$ref>#/components/responses/HighScoreNotFoundundefined</$ref>undefined</404>undefined<500><$ref>#/components/responses/InternalServerErrorundefined</$ref>undefined</500>undefined</responses>undefined</patch>undefined<delete>undefined<summary>Delete a high score record by ID</summary>undefined<tags>HighScores</tags>undefined<responses>undefined<204>undefined<description>High score deleted successfully</description>undefined</204>undefined<404><$ref>#/components/responses/HighScoreNotFoundundefined</$ref>undefined</404>undefined<500><$ref>#/components/responses/InternalServerErrorundefined</$ref>undefined</500>undefined</responses>undefined</delete>undefined<//highscore/{id}>undefined</paths>undefined<components>undefined<schemas>undefined<HighScore>undefined<type>object</type>undefined<properties>undefined<id>undefined<type>integer</type>undefined</id>undefined<name>undefined<type>string</type>undefined</name>undefined<score>undefined<type>integer</type>undefined</score>undefined</properties>undefined<examples>undefined<id>1</id>undefined<name>Lou</name>undefined<score>93477</score>undefined</examples>undefined</HighScore>undefined<HighScoreRequest>undefined<type>object</type>undefined<properties>undefined<name>undefined<type>string</type>undefined</name>undefined<score>undefined<type>integer</type>undefined</score>undefined</properties>undefined<examples>undefined<name>Lou</name>undefined<score>93477</score>undefined</examples>undefined</HighScoreRequest>undefined</schemas>undefined<parameters>undefined<HighScoreId>undefined<name>id</name>undefined<in>path</in>undefined<required>true</required>undefined<description>ID of the high score</description>undefined<schema>undefined<type>integer</type>undefined</schema>undefined<example>1</example>undefined</HighScoreId>undefined</parameters>undefined<responses>undefined<InternalServerError>undefined<description>Internal server error</description>undefined<content>undefined<application/json>undefined<schema>undefined<type>object</type>undefined<properties>undefined<error>undefined<type>string</type>undefined</error>undefined</properties>undefined</schema>undefined</application/json>undefined</content>undefined</InternalServerError>undefined<HighScoreNotFound>undefined<description>High score not found</description>undefined<content>undefined<application/json>undefined<schema>undefined<type>object</type>undefined<properties>undefined<error>undefined<type>string</type>undefined</error>undefined</properties>undefined</schema>undefined</application/json>undefined</content>undefined</HighScoreNotFound>undefined</responses>undefined</components>undefined</root>

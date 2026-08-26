@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A pared-down example of a REST API for demonstration purposes"
+    />
+    <title>High Scores API - A sample API for educational demo purposes</title>
+
+    <!-- Playfair Display font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Local assets -->
+    <link rel="stylesheet" href="/apidocs/highscores.css" />
+    <link rel="icon" href="/images/cactus.svg">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <span class="title">High Scores API</span>
+      </h1>
+      <div>
+        <p>A sample API for educational demonstration by Minae Lee</p>
+        <span class="url"><a href="https://glitch.com/edit/#!/highscores-api?path=server.js">View source</a></span>
+        <span class="url"><a href="https://highscores-client.glitch.me/">View client</a></span>
+        <span class="url"><a href="/apidocs/highscores-openapi.yml">View OpenAPI in YAML</a></span>
+        <span class="url"><a href="/apidocs/highscores-openapi.json">View OpenAPI in JSON</a></span>
+        <span class="url"><a href="/apidocs">Return to companion page</a></span>
+      </div>
+      <div style="margin-top: 16px;">
+        <span class="url"><a href="/apidocs/redoc.html">View Redoc Reference</a></span>
+        <span class="url"><a href="/apidocs/rapidoc.html">View Rapidoc Reference</a></span>
+      </div>
+
+    </header>
+
+    <!-- section: details -->
+    <section id="details">
+
+      <!-- Base URL -->
+      <h2>API base URL</h2>
+      <code>https://highscores-api.glitch.me</code>
+
+      <!-- Endpoints -->
+      <h2>API endpoints</h2>
+      <table>
+        <tr>
+          <th>HTTP Method</th>
+          <th>Path</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>GET</code></td>
+          <td><code>/highscores</code></td>
+          <td>Retrieve all high scores</td>
+        </tr>
+        <tr>
+          <td><code>GET</code></td>
+          <td><code>/highscore/{id}</code></td>
+          <td>Retrieve one high score by ID</td>
+        </tr>
+        <tr>
+          <td><code>POST</code></td>
+          <td><code>/highscores</code></td>
+          <td>Add a new high score</td>
+        </tr>
+        <tr>
+          <tr>
+            <td><code>PATCH</code></td>
+            <td><code>/highscores/{id}</code></td>
+            <td>Update a high score</td>
+          </tr>
+          <tr>
+          <td><code>PUT</code></td>
+          <td><code>/highscore/{id}</code></td>
+          <td>Replace a high score</td>
+        </tr>
+        <tr>
+          <td><code>DELETE</code></td>
+          <td><code>/highscore/{id}</code></td>
+          <td>Delete one high score by ID</td>
+        </tr>
+        <tr>
+          <td><code>DELETE</code></td>
+          <td><code>/highscores/{id}</code></td>
+          <td>Delete all high scores</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- section: sample cURL requests -->
+    <section id="curl-requests">
+      <h2>Sample cURL commands</h2>
+      <p>
+        Use cURL commands to send test HTTP requests to endpoints.
+      </p>
+      <!-- GET ALL -->
+      <h3 id="get">get</h3>
+      <code class="curl-example">
+curl https://highscores-api.glitch.me/highscores
+      </code>
+
+      <!-- GET ONE -->
+      <h3 id="get">get/{id}</h3>
+      <code class="curl-example">
+curl https://highscores-api.glitch.me/highscore/<span class="text-red">1</span>
+      </code>
+
+      <!-- POST -->
+      <h3 id="post">post</h3>
+
+      <span class="callout">
+        For Windows Command Prompt (cmd.exe), use:
+      </span><br />
+      <code class="curl-example">
+curl -X POST -H "Content-Type: application/json" -d "{\"name\": \"<span class="text-red">Player1</span>\", \"score\": <span class="text-red">100</span>}" https://highscores-api.glitch.me/highscore
+      </code><br />
+
+      <span class="callout">
+        For macOS Terminal, zsh, bash, or WSL, use:
+      </span><br />
+      <code class="curl-example">
+curl -X POST -H "Content-Type: application/json" -d '{"name": "<span class="text-red">Player1</span>", "score": <span class="text-red">100</span>}' https://highscores-api.glitch.me/highscore
+      </code>
+
+      <!-- PATCH -->
+      <h3 id="patch">patch/{id}</h3>
+
+      <span class="callout">
+        For Windows Command Prompt (cmd.exe), use:
+      </span><br />
+      <code class="curl-example">
+curl -X PATCH -H "Content-Type: application/json" -d "{\"score\": <span class="text-red">150</span>}" "https://highscores-api.glitch.me/highscore/<span class="text-red">1</span>"
+      </code><br />
+
+      <span class="callout">
+        For macOS Terminal, zsh, bash, or WSL, use:
+      </span><br />
+      <code class="curl-example">
+curl -X PATCH -H "Content-Type: application/json" -d '{"score": <span class="text-red">150</span>}' https://highscores-api.glitch.me/highscore/<span class="text-red">1</span>
+      </code>
+
+      <!-- DELETE -->
+      <h3 id="delete">delete/{id}</h3>
+      <code class="curl-example">
+curl -X DELETE https://highscores-api.glitch.me/highscore/<span class="text-red">1</span>
+      </code>
+    </section>
+  </body>
+</html>

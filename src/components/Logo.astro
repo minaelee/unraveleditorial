@@ -1,0 +1,25 @@
+---
+import { Link } from 'accessible-astro-components'
+import { Image } from 'astro:assets'
+import themeConfig from '@theme-config'
+
+/**
+ * Logo Component
+ *
+ * @description Logo description
+ */
+interface Props {
+  /**
+   * Whether to load the image eagerly or lazily
+   * @default 'eager'
+   */
+  loading?: 'eager' | 'lazy'
+}
+
+const { loading = 'eager' }: Props = Astro.props
+---
+
+<Link href="/" class="flex items-center gap-1">
+  <Image src="/images/green-spiral.svg" alt="" width={14} height={14} class="translate-y-0.5 shrink-0" />
+  <span class="text-sm font-bold sm:text-lg"><span class="font-sacramento">unravel</span> editorial</span>
+</Link>

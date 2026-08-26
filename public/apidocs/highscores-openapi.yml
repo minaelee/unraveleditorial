@@ -1,0 +1,194 @@
+openapi: 3.1.0
+info:
+  title: High Scores API
+  version: 1.0.0
+  description: API for managing high scores
+  contact:
+    name: Minae Lee
+    email: minae.lee@gmail.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+tags:
+  - name: HighScores
+    description: Endpoints for managing high scores
+servers:
+  - url: https://highscores-api.glitch.me
+    description: Production server
+
+paths:
+  /highscores:
+    get:
+      summary: Get all high scores
+      tags:
+        - HighScores
+      responses: # TO DO - add more responses later
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/HighScore'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Delete all high scores
+      tags:
+        - HighScores
+      responses:
+        '204':
+          description: High scores deleted successfully
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /highscore:
+    post:
+      summary: Add a new high score record
+      tags:
+        - HighScores
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HighScore'
+      responses:
+        '201':
+          description: High score added successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HighScore'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /highscore/{id}:
+    parameters:
+      - $ref: '#/components/parameters/HighScoreId'
+    get:
+      summary: Get one high score
+      tags:
+        - HighScores
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HighScore'
+        '404':
+          $ref: '#/components/responses/HighScoreNotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    put:
+      summary: Replace a high score record by ID
+      tags:
+        - HighScores
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HighScoreRequest'
+      responses:
+        '200':
+          description: High score replaced successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HighScore'
+        '404':
+          $ref: '#/components/responses/HighScoreNotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    patch:
+      summary: Update a high score by ID
+      tags:
+        - HighScores
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                score:
+                  type: integer
+              examples:
+                - score: 9999
+      responses:
+        '200':
+          description: High score updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HighScore'
+        '404':
+          $ref: '#/components/responses/HighScoreNotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+    delete:
+      summary: Delete a high score record by ID
+      tags:
+        - HighScores
+      responses:
+        '204':
+          description: High score deleted successfully
+        '404':
+          $ref: '#/components/responses/HighScoreNotFound'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  schemas:
+    HighScore:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        score:
+          type: integer
+      examples:
+        - id: 1
+          name: Lou
+          score: 93477
+    HighScoreRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        score:
+          type: integer
+      examples:
+        - name: Lou
+          score: 93477
+  parameters:
+    HighScoreId:
+      name: id
+      in: path
+      required: true
+      description: ID of the high score
+      schema:
+        type: integer
+      example: 1
+  responses:
+    InternalServerError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+    HighScoreNotFound:
+      description: High score not found
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
