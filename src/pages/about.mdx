@@ -4,7 +4,7 @@ title: "About | Unravel Editorial"
 
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
-import { Link } from 'accessible-astro-components'
+import { Heading, Link } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 
 <DefaultLayout title="About | Unravel Editorial">
@@ -26,7 +26,7 @@ import { Icon } from 'astro-icon/components'
         I am a freelance editor based out of Phoenix, Arizona.<br />
         <span aria-hidden="true">&nbsp;</span>
 
-        My writing and editing background is mainly in coding and software technology. More recently, I have trained and worked in <Link href="/services">manuscript-level editing for fiction and nonfiction</Link>.<br />
+        My writing and editing background is mainly in coding and software technology. More recently, I have trained and worked in manuscript-level editing for fiction and nonfiction.<br />
         <span aria-hidden="true">&nbsp;</span>
 
         I bring an impeccable eye for detail, a love of language, and a passion for the craft of storytelling to my work.<br />
@@ -34,8 +34,36 @@ import { Icon } from 'astro-icon/components'
 
         For more about me personally, find me at <Link href="https://minaelee.com">minaelee.com</Link>.<br />
       </p>
+    </div>
+  </section>
 
+  <section class="my-12">
+    <div class="container">
+      <Heading level="h2">qualifications</Heading>
+      <ul class="list-disc pl-6 space-y-0">
+        <li>B.A. in Applied Linguistics & Philosophy, Portland State University</li>
+        <li><Link href="/images/aces-certificate.pdf">Poynter-ACES certification in copyediting</Link></li>
+        <li>Currently pursuing the <Link href="https://www.clubedfreelancers.com/">Club Ed</Link> certification in Developmental Editing</li>
+        <li>Completed training in manuscript assessment and developmental / line / copy editing from Club Ed</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="my-12">
+    <div class="container">
+      <Heading level="h2">past lives</Heading>
+      I've worked professionally in various tech and arts spaces, from indie game development to Linux software documentation. A few titles from my past lives below:
+
+      <ul class="list-disc pl-6 space-y-0">
+        <li>Senior Technical Author, <Link href="https://canonical.com" target="_blank">Canonical</Link> (2024-2026)</li>
+        <li>Director of Curriculum, <Link href="https://nucamp.co" target="_blank">Nucamp Coding Bootcamp</Link> (2018-2023)</li>
+        <li>Co-owner, Conflux Studio (2016-2018)</li>
+        <li>LTE Test Automation Engineer, <Link href="https://www.example.com" target="_blank">Intel</Link> (2010-2015)</li>
+      </ul>
 
     </div>
   </section>
+
+
+
 </DefaultLayout>
