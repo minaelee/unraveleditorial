@@ -9,42 +9,42 @@ import { Heading, Link } from 'accessible-astro-components'
 <DefaultLayout title="Services | Unravel Editorial">
   <PageHeader title="services" />
 
-  <section class="mt-0 mb-12">
+  <section class="mt-0 mb-12 space-content">
     <div class="container">
-        <ul class="list-disc pl-6 space-y-0">
-          <li>Manuscript assessment</li>
-          <li>Developmental editing</li>
-          <li>Line editing</li>
-          <li>Copyediting</li>
-          <li>Proofreading</li>
-          <li><Link href="/beta-reading">Beta reading</Link></li>
-        </ul>
-        <p>
-        <span aria-hidden="true">&nbsp;</span>
-
-        I do not edit manuscripts produced using generative AI, nor will I edit _your_ work using generative AI.<br />
-        <span aria-hidden="true">&nbsp;</span>
-
-        For an initial consultation to discuss your project and determine if we're a good fit, please <Link href="mailto:unraveleditorial@gmail.com">email me</Link>.
-
-        Under certain conditions, I offer <Link href="/beta-reading">beta reading</Link> at no charge.
-      </p>
+      <ul class="list-disc pl-6 space-y-0">
+        <li>Manuscript assessment ($0.15/word)</li>
+        <li>Developmental editing ($0.3/word)</li>
+        <li>Line editing ($0.25/word)</li>
+        <li>Copyediting ($0.2/word)</li>
+      </ul>
+    </div>
+    <div class="container space-content">
+      The rates provided are general rates and may vary based on the specific requirements of your manuscript.
+      
+      I provide sample edits of up to 1000 words from your manuscript.
+      
+      Please <Link href="/contact">contact me</Link> for a firm quote, or to request a sample edit.
     </div>
   </section>
-  <section class="my-12">
-    <div class="container">
-      <Heading level="h2">preferred genres</Heading>
-        I prefer to work with the following **fiction** genres:
-      <ul class="list-disc pl-6 space-y-0">
-        <li>Literary and upmarket</li>
-        <li>Speculative, such as science fiction, fantasy, and magical realism</li>
-        <li>Horror</li>
-        <li>Suspense</li>
-        <li>Thriller</li>
-      </ul>
-      <br />
 
-      For **nonfiction**, my background in software engineering and <Link href="/tech-writing">technical writing</Link> especially qualifies me to edit developer-focused manuscripts. I also work with other types of nonfiction, such as memoirs.
+  <section class="my-12">
+    <div class="container space-content">
+      <Heading level="h2">editorial genres</Heading>
+      <Heading level="h3">fiction</Heading>
+      I specialize in speculative fiction, including the following genres:
+      <ul class="list-disc pl-6 space-y-0">
+        <li>**Science fiction**</li>
+        <li>**Fantasy** (including contemporary fantasy)</li>
+        <li>**Magical realism**</li>
+        <li>**Paranormal**</li>
+        <li>**Horror**</li>
+      </ul>
+
+      I also work with manuscripts in the **suspense** and **thriller** genres.
+    <br />
+
+      <Heading level="h3">nonfiction</Heading>
+      I specialize in manuscripts related to **information technology** and **computer science**.
     </div>
   </section>
 

@@ -34,7 +34,12 @@ export default defineThemeConfig({
       },
       {
         type: 'link',
-        label: 'About / Contact',
+        label: 'Contact',
+        href: '/contact',
+      },
+      {
+        type: 'link',
+        label: 'About',
         href: '/about',
       },
     ],
