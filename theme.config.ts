@@ -9,7 +9,7 @@ export default defineThemeConfig({
   seo: {
     title: 'Unravel Editorial',
     description:
-      'Fiction and fiction editorial services',
+      'Fiction and nonfiction editorial services',
     author: 'Minae Lee',
     image: previewImage, // Can also be a string e.g. '/social-preview-image.png',
   },
