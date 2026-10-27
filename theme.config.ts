@@ -29,6 +29,11 @@ export default defineThemeConfig({
       },
       {
         type: 'link',
+        label: 'Guide',
+        href: '/guide',
+      },
+      {
+        type: 'link',
         label: 'Services',
         href: '/services',
       },

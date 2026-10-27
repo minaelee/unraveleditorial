@@ -1,13 +1,15 @@
 ---
 title: "Services | Unravel Editorial"
-description: "Editorial services for speculative fiction and nonfiction, including manuscript assessment, developmental editing, line editing, and copyediting. Based in Phoenix, Arizona and working with clients worldwide."
 ---
 
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
 import { Heading, Link } from 'accessible-astro-components'
 
-<DefaultLayout title="Services | Unravel Editorial">
+<DefaultLayout 
+  title="Services | Unravel Editorial"
+  description="Editorial services for speculative fiction and nonfiction, including manuscript assessment, developmental editing, line editing, and copyediting. Based in Phoenix, Arizona and working with clients worldwide."
+>
   <PageHeader title="services" />
 
   <section class="mt-0 mb-12 space-content">
@@ -20,13 +22,29 @@ import { Heading, Link } from 'accessible-astro-components'
         <li>Copyediting ($0.02/word)</li>
       </ul>
       <p>
-        Not sure which service fits your manuscript? <Link href="/start-here">Start here to learn how each service fits into your manuscript's journey.</Link>
+        Not sure which service you need? <Link href="/guide">Start with my guide on how to choose a service</Link>, including <Link href="/guide#types">what is provided with each type</Link>.
       </p>
     </div>
     <div class="container space-content">
-      The rates provided are general rates and may vary based on the specific requirements of your manuscript.
+      The rates provided are general and may vary based on the specific requirements of your manuscript.
     
       For line and copy editing, I provide sample edits of up to 1000 words from your manuscript. Please <Link href="/contact">contact me</Link> for a firm quote, or to request a sample edit.
+
+      No part of your manuscript will be shared with any third party, including AI tools.
+    </div>
+  </section>
+
+  <section class="mt-0 mb-12 space-content">
+    <div class="container space-content">
+
+        <Heading level="h2" id="prerequisites">prerequisites</Heading>
+        Before you choose a service, make sure you meet these prerequisites:
+        <ul class="list-disc pl-6 space-y-0">
+          <li>Your manuscript is completed and ready for editorial feedback.</li>
+          <li>It is not a brain-dump or first-draft manuscript, and you have edited it yourself to the best of your ability.</li>
+        </ul>
+
+      If your manuscript needs significant work to be ready for editing, you might need to seek out a book doctor or writing coach first.
     </div>
   </section>
 

@@ -6,24 +6,25 @@ import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
 import { Heading, Link } from 'accessible-astro-components'
 
-<DefaultLayout title="About | Unravel Editorial">
+<DefaultLayout 
+  title="About | Unravel Editorial"
+  description="Learn more about the editor behind Unravel Editorial, their approach, qualifications, and background."
+>
   <PageHeader title="about" />
   <section>
     <div class="container space-content">
-      I am based out of Phoenix, Arizona (USA). I'm a first-generation Korean-American, and I've divided my adult life between the Pacific Northwest and the Sonoran desert. I travel often, read copiously, make art as much as I'm able, and I'm obsessed with language.<br />
-
-      When I'm not editing, you can typically find me at an easel, <Link href="https://minaelee.com/art">playing with paints</Link>.
+      I am based out of Phoenix, Arizona (USA). I'm an editor, a writer, and <Link href="https://minaelee.com/art">an artist</Link>. I am endlessly fascinated by both language and visual art; they are two of our most ancient powers as a species. If you've found me somehow, then I suspect that you also understand this.<br />
     </div>
   </section>
 
     <section class="my-12">
     <div class="container space-content">
       <Heading level="h2">editorial approach</Heading>
-      If you've finished writing a full-length manuscript, I know it's been one of the most difficult and fulfilling acts of creation you've ever accomplished. It's not easy to put down tens of thousands of words in a narrative that all somehow have to make sense together in a satisfying way. I have the utmost admiration for what you have accomplished. Storytelling is a profound and transformative act.
+      If you've finished writing a full-length manuscript, I know it's been one of the most difficult and fulfilling acts of creation you've ever undertaken. It's not easy to chain together thousands of words into a narrative that makes sense in a satisfying way. I have the utmost admiration for what you have already accomplished. Storytelling is a profound and transformative act.
 
       My intent as an editor is to help you refine your story to its fullest potential. I never want to take over your authorial voice.
     
-      Your writing might already be strong, but everyone has blind spots, especially when it comes to a project they've been focused on for a long time. I offer fresh eyes with training in linguistics, editing, and storycraft. I'll ride along and point out potholes and missed turns, but I'll always remember that it's your vehicle, you're the driver, and it's your journey. It's _your_ story to tell. But I can help you make it stronger.
+      Your writing might already be strong, but everyone has blind spots, especially when it comes to a project they've focused on for a long time. I offer fresh eyes with training in linguistics, editing, and storycraft. I'll ride along and point out potholes and missed turns, but I'll always remember that it's your vehicle, you're the driver, and it's your journey. It's _your_ story to tell. But I can help you make it stronger.
     </div>
   </section>
 
@@ -40,9 +41,11 @@ import { Heading, Link } from 'accessible-astro-components'
   </section>
 
   <section class="my-12">
-    <div class="container">
+    <div class="container space-content">
       <Heading level="h2">past lives</Heading>
-      I've worked professionally in spaces ranging from indie game development to Linux software documentation. A few titles from my past lives below:
+      I've worked professionally in spaces ranging from indie game development to Linux software documentation.
+      
+      A few titles from my past lives below:
 
       <ul class="list-disc pl-6 space-y-0">
         <li>Senior Technical Author, <Link href="https://canonical.com" target="_blank">Canonical</Link> (2024-2026)</li>
