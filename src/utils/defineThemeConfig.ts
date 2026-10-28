@@ -53,19 +53,13 @@ export type ThemeConfig = {
   socials?: SocialItem[]
 }
 
-const defaultConfig: Omit<ThemeConfig, 'name' | 'id'> = {
+const defaultConfig: Omit<ThemeConfig, 'name' | 'id' | 'colors'> = {
   seo: {
     title: 'Unravel Editorial',
     subtitle: '',
     description: 'Editorial services for fiction and nonfiction',
     author: 'Minae Lee',
     image: null,
-  },
-  colors: {
-    primary: '#d648ff',
-    secondary: '#00d1b7',
-    neutral: '#b9bec4',
-    outline: '#ff4500',
   },
   navigation: {
     darkmode: true,
@@ -81,10 +75,7 @@ export function defineThemeConfig(config: ThemeConfig): ThemeConfig {
       ...defaultConfig.seo,
       ...config.seo,
     },
-    colors: {
-      ...defaultConfig.colors,
-      ...config.colors,
-    },
+    colors: config.colors,
     socials: config.socials ?? defaultConfig.socials,
     navigation: {
       ...defaultConfig.navigation,

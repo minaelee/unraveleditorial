@@ -9,15 +9,15 @@ export default defineThemeConfig({
   seo: {
     title: 'Unravel Editorial',
     description:
-      'Fiction and nonfiction editorial services',
+      'Fiction and nonfiction editorial services, specializing in speculative fiction',
     author: 'Minae Lee',
     image: previewImage, // Can also be a string e.g. '/social-preview-image.png',
   },
   colors: {
     primary: '#738940ff',
     secondary: '#9e822cff',
-    neutral: '#f3f5f8ff',
-    outline: '#52def0ff',
+    neutral: 'rgb(250, 250, 245)',
+    outline: 'rgb(240, 153, 82)',
   },
   navigation: {
     darkmode: true,

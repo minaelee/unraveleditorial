@@ -19,6 +19,21 @@ body {
   color: var(--foreground-color);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: light-dark(var(--color-primary-300), var(--color-primary-500));
+}
+
+.page-surface {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  background-color: light-dark(#fff, var(--color-neutral-900));
+  color: var(--foreground-color);
+}
+
 a {
   transition: color var(--animation-speed-fast) var(--cubic-bezier);
   color: var(--link-color);

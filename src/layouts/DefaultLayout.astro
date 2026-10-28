@@ -122,7 +122,9 @@ const imageUrl = new URL(imagePath, Astro.site).href
   <body>
     <Header />
     <main id="main-content" transition:animate="fade">
-      <slot />
+      <div class="page-surface">
+        <slot />
+      </div>
     </main>
     <Footer />
     <style lang="scss" is:global>

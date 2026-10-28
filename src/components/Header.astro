@@ -24,6 +24,8 @@ import { HighContrast, ReducedMotion, SkipLink } from 'accessible-astro-componen
   @use 'scss/base/breakpoint' as *;
 
   header {
+    background-color: light-dark(var(--brand-neutral), var(--header-background-dark));
+
     li.type-icon {
       display: block;
 

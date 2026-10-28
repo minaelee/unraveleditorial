@@ -2,18 +2,13 @@
   color-scheme: light;
   interpolate-size: allow-keywords;
 
-  // brand colors (change these to your own brand colors)
-  --brand-primary: #d648ff;
-  --brand-secondary: #00d1b7;
-  --brand-neutral: #b9bec4;
-  --brand-outline: #ff4500;
-
   // pallet brand
   --color-primary-100: oklch(from var(--brand-primary) 90% c h);
   --color-primary-200: oklch(from var(--brand-primary) 80% c h);
   --color-primary-300: oklch(from var(--brand-primary) 70% c h);
   --color-primary-400: oklch(from var(--brand-primary) 60% c h);
   --color-primary-500: oklch(from var(--brand-primary) 50% c h);
+  --color-primary-600: oklch(from var(--brand-primary) 40% c h);
   --color-secondary-100: oklch(from var(--brand-secondary) 90% c h);
   --color-secondary-200: oklch(from var(--brand-secondary) 80% c h);
   --color-secondary-300: oklch(from var(--brand-secondary) 70% c h);
@@ -32,13 +27,14 @@
   --color-neutral-700: oklch(from var(--brand-neutral) 40% c h);
   --color-neutral-800: oklch(from var(--brand-neutral) 30% c h);
   --color-neutral-900: oklch(from var(--brand-neutral) 15% c h);
+  --header-background-dark: oklch(from var(--brand-primary) 20% 0.015 h);
 
   // color scheme
   --foreground-color: light-dark(var(--color-neutral-800), var(--color-neutral-100));
   --background-color: light-dark(var(--color-neutral-100), var(--color-neutral-900));
   --icon-color: light-dark(var(--color-neutral-800), var(--color-neutral-100));
-  --link-color: light-dark(var(--color-primary-400), var(--color-secondary-100));
-  --link-hover-color: light-dark(var(--color-primary-300), var(--color-secondary-200));
+  --link-color: light-dark(var(--color-primary-500), var(--color-secondary-100));
+  --link-hover-color: light-dark(var(--color-primary-600), var(--color-secondary-200));
   --border-color: light-dark(var(--color-neutral-900), var(--color-neutral-100));
   --border-color-subtle: light-dark(var(--color-neutral-300), var(--color-neutral-800));
   --text-decoration-color: light-dark(var(--color-neutral-700), var(--color-neutral-100));
