@@ -22,6 +22,7 @@ body {
 main {
   display: flex;
   flex-direction: column;
+  margin-block-start: var(--site-header-height);
   background-color: light-dark(var(--color-primary-300), var(--color-primary-500));
 }
 
