@@ -1,8 +1,4 @@
 ---
-import CallToAction from './CallToAction.astro'
-import Logo from './Logo.astro'
-import { Heading, Link } from 'accessible-astro-components'
-
 /**
  * Footer Component
  *
@@ -12,10 +8,23 @@ const currentYear = new Date().getFullYear()
 ---
 
 <footer>
+  <div class="site-footer__inner container">
+    <p class="site-footer__copyright">&copy; {currentYear} Unravel Editorial</p>
+  </div>
 </footer>
 
 <style>
-  section {
-    border-top: 1px solid var(--border-color-subtle);
+  footer {
+    border-block-start: 1px solid var(--border-color-subtle);
+    background-color: light-dark(var(--brand-neutral), var(--header-background-dark));
+  }
+
+  .site-footer__inner {
+    padding-block: var(--space-xs);
+  }
+
+  .site-footer__copyright {
+    margin: 0;
+    font-size: var(--font-size--1);
   }
 </style>
