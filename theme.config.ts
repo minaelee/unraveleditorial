@@ -24,27 +24,27 @@ export default defineThemeConfig({
     items: [
       {
         type: 'link',
-        label: 'Home',
+        label: 'home',
         href: '/',
       },
       {
         type: 'link',
-        label: 'Guide',
+        label: 'guide',
         href: '/guide',
       },
       {
         type: 'link',
-        label: 'Services',
+        label: 'services',
         href: '/services',
       },
       {
         type: 'link',
-        label: 'Contact',
+        label: 'contact',
         href: '/contact',
       },
       {
         type: 'link',
-        label: 'About',
+        label: 'about',
         href: '/about',
       },
     ],

@@ -57,7 +57,7 @@ const defaultConfig: Omit<ThemeConfig, 'name' | 'id' | 'colors'> = {
   seo: {
     title: 'Unravel Editorial',
     subtitle: '',
-    description: 'Editorial services for fiction and nonfiction',
+    description: 'Editorial services for speculative fiction and technical nonfiction',
     author: 'Minae Lee',
     image: null,
   },
